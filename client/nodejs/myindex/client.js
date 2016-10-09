@@ -4,7 +4,6 @@ var client = new elasticsearch.Client({
   log: 'trace'
 });
 
-
 client.ping({
   requestTimeout: 30000,
 
@@ -18,3 +17,14 @@ client.ping({
   }
 });
 
+
+
+client.search({
+  q: 'pants'
+}).then(function (body) {
+  var hits = body.hits.hits;
+}, function (error) {
+  console.trace(error.message);
+});
+
+exports.client = client;
