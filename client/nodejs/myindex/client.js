@@ -1,10 +1,12 @@
 var elasticsearch = require('elasticsearch');
-var client = new elasticsearch.Client({
-  host: 'localhost:19200',
+var client = elasticsearch.Client({
+  host: 'localhost:9200',
+  apiVersion: '2.3',
   log: 'trace'
 });
 
-client.ping({
+/**
+ * client.ping({
   requestTimeout: 30000,
 
   // undocumented params are appended to the query string
@@ -26,5 +28,6 @@ client.search({
 }, function (error) {
   console.trace(error.message);
 });
+*/
 
 exports.client = client;
