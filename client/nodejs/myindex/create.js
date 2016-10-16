@@ -1,12 +1,11 @@
 var elasticsearch = require('elasticsearch');
 
- var client = elasticsearch.Client({
+/* var client = elasticsearch.Client({
   host: "localhost:9200",
   log: "trace"
 });
-console.log(elasticsearch.apiVersion);
-//var client = require('./client');
-console.log(client)
+i*/
+var client = require('./client');
 
 client.create({
   index: 'myindex',
