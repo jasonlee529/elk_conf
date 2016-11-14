@@ -20,7 +20,6 @@ connection.query('select * from infisa_extract_attribute',function(err,rows,fiel
   })
 })
 connection.end();
-console.log("长度"+attrs.length);
 
 var client199 = es.Client({
   host: "192.168.1.91:9200",
