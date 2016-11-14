@@ -1,0 +1,16 @@
+{
+  "name": "hospital_clinic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "diff.js",
+  "dependencies": {
+    "elasticsearch": "^11.0.1",
+    "mysql": "^2.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
