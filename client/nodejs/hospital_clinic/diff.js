@@ -7,23 +7,29 @@ var mysql = require('mysql');
 var attrs=[];
 
 var connection = mysql.createConnection({
-  host:'192.168.1.199',
-  user:'web',
-  password:'web_123qaz',
+  host:'192.168.1.91',
+  port:'3306',
+  user:'root',
+  password:'rootroot',
   database:'web_clinic'
 });
 
 connection.connect();
+console.log('sql =======');
 connection.query('select * from infisa_extract_attribute',function(err,rows,fields){
+  console.log('sql')
   rows.forEach(function(n){
     var aggs =  esResult(n);
     var data = sqlResult(n);
-    console.log(aggs)
+/*
+ * console.log(aggs)
     aggs.forEach(function(agg,index){
         console.log(agg) ;
       console.log(data[index]);
     })
+  */
   })
+  connection.end();
 })
 //connection.end();
 
@@ -36,18 +42,18 @@ function sqlResult(n){
     return rows;
   });
 }
+/*
 var client199 = es.Client({
   host: "192.168.1.91:9200",
   log: "info"
 });
-/*
-var client96 = es.client({
-  host: "192.168.1.95:9200",
-  log: "trace"
-});
 */
+var client = es.Client({
+  host: "192.168.1.95:9200",
+  log: "info"
+});
 function esResult(n){
-  client199.search({
+  client.search({
    index:'hospital_clinic',
    body:{
      query:{
@@ -62,8 +68,6 @@ function esResult(n){
    }
   },function(error,response){
     var aggs = response.aggregations.agg_name.buckets;
-    console.log(n.es_field);
-    console.log(JSON.stringify(aggs));
     return aggs;
   });
 };
