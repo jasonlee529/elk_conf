@@ -12,7 +12,7 @@ config.mysql = {
 }
 config.es = {
   host: '192.168.1.95:9200',
-  log : 'info'
+  log : 'trace'
 }
 
 module.exports = config;
