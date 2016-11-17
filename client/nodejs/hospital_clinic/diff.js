@@ -3,56 +3,44 @@
  */
 var es = require('elasticsearch');
 var mysql = require('mysql');
+var config  = require('./config');
+var pool = mysql.createPool(config.mysql);
 
-var attrs=[];
-
-var connection = mysql.createConnection({
-  host:'192.168.1.91',
-  port:'3306',
-  user:'root',
-  password:'rootroot',
-  database:'web_clinic'
-});
-
-connection.connect();
-console.log('sql =======');
-connection.query('select * from infisa_extract_attribute',function(err,rows,fields){
-  console.log('sql')
-  rows.forEach(function(n){
-    var aggs =  esResult(n);
-    var data = sqlResult(n);
-/*
- * console.log(aggs)
-    aggs.forEach(function(agg,index){
-        console.log(agg) ;
-      console.log(data[index]);
-    })
-  */
+pool.getConnection(function(err,connection){
+  connection.query('select * from infisa_extract_attribute limit 1',function(err,rows,fields){
+    rows.forEach(function(n){
+      var aggs =  esResult(n,sqlResult);
+     })
   })
-  connection.end();
 })
-//connection.end();
-
-function sqlResult(n){
+function sqlResult(n,obj){
   var lastIndex = n.sql_column.lastIndexOf(".");
   var tableName = n.sql_column.substring(0,lastIndex);
   var column = n.sql_column.substring(lastIndex+1);
-  console.log(tableName+"   "+column);
-  connection.query(" select distinct "+column+" , count(1) cnt from "+tableName+" group by "+column+" order by cnt desc limit 20" , function(err,rows,fields){
-    return rows;
-  });
+  var sql = " select distinct t1."+column+" name , count(1) cnt from "+tableName+" t1"+
+            " join hospital.dw_userinfo t2 on (t1.pati_id = t2.pati_id and t1.pati_visit_id = t2.pati_visit_id) "+
+            " group by t1."+column+" order by cnt desc limit 20" ;
+  log(sql);
+  pool.getConnection(function(err,connection){
+     connection.query(sql, function(err,rows,fields){
+     if(err === null){
+       log(rows);
+       rows.forEach(function(row,idx){
+          var agg = obj[idx];
+         log();
+         log(row.name+" : "+row.cnt);
+       })
+     }else{
+       log(err);
+     }
+    });
+  })
 }
-/*
-var client199 = es.Client({
-  host: "192.168.1.91:9200",
-  log: "info"
-});
-*/
 var client = es.Client({
   host: "192.168.1.95:9200",
   log: "info"
 });
-function esResult(n){
+function esResult(n,fn){
   client.search({
    index:'hospital_clinic',
    body:{
@@ -62,13 +50,15 @@ function esResult(n){
      size:0,
      aggs:{
        agg_name:{
-         terms:{field:n.es_field}
+         terms:{field:n.es_field,size:10}
        }
      }
    }
   },function(error,response){
     var aggs = response.aggregations.agg_name.buckets;
-    return aggs;
+    fn(n,aggs);
   });
 };
-
+function log(obj){
+  console.log(obj);
+}
