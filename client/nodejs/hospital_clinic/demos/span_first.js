@@ -9,19 +9,21 @@ client.search({
     index: "hospital_clinic",
     body: {
         "query": {
-            "span_first": {
-                match: {
-                    span_term: {
-                        "oper_info.oper_name": "冠状动脉造影术"
+            "filtered": {
+                query: {
+                    span_first: {
+                        match: {
+                            span_term: {
+                                "oper_info.oper_name": "冠状动脉造影术"
+                            }
+                        },
+                        end: 300
                     }
                 },
-                end: 10
-            }
-        },
-        "filtered": {
-            "filter": {
-                "script": {
-                    "script": "doc['oper_info.oper_date'].value > doc['drugs_in_hospital.drug_day'].value"
+                "filter": {
+                    "script": {
+                        "script": "doc['oper_info.oper_date'].value > doc['drugs_in_hospital.drug_day'].value"
+                    }
                 }
             }
         },
