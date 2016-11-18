@@ -1,0 +1,17 @@
+{
+  "name": "myindex",
+  "version": "1.0.0",
+  "description": "Test elasticsearch api via javascript @varsion 1.5",
+  "main": "client.js",
+  "dependencies": {
+    "elasticsearch": "^11.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jason",
+  "license": "ISC",
+  "keywords":"elasticsearch javascript nodejs"
+
+}
