@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -XPUT http://localhost:9200/blog -d '{
+curl -XPUT http://localhost:19200/blog -d '{
 
 "settings":{
     "number_of_shards":1,
