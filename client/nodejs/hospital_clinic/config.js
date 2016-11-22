@@ -12,6 +12,7 @@ config.mysql = {
 }
 config.es = {
   host: '192.168.1.95:9200',
+  index : 'hospital_clinic_xw',
   log : 'trace'
 }
 
