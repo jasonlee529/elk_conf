@@ -1,0 +1,2172 @@
+{
+  "settings": {
+    "index": {
+      "number_of_replicas": 0,
+      "refresh_interal": -1
+    }
+  },
+  "mappings": {
+    "medical_record": {
+      "properties": {
+        "adverseInHospital": {
+          "properties": {
+            "cathPCIEvent": {
+              "properties": {
+                "eventName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiVisitId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "starDateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "macceEvent": {
+              "properties": {
+                "eventName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiVisitId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "starDateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "otherEvent": {
+              "properties": {
+                "eventName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiVisitId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "starDateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "patiVisitId": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "caseId": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "complicationInHospital": {
+          "properties": {
+            "concurrent": {
+              "properties": {
+                "itemStanResult": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiVisitId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "patiVisitId": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "diagInHospitalInfo": {
+          "properties": {
+            "admiDiag": {
+              "properties": {
+                "illnId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "illnLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiVisitId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "illnName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "label": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string"
+                    },
+                    "labelName": {
+                      "type": "string"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "patiId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiVisitId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "discDiag": {
+              "properties": {
+                "illnId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "illnLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "illnName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "label": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "itemResult": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "mainDiag": {
+              "properties": {
+                "illnId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "illnLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "illnName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "label": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "otherDiag": {
+              "properties": {
+                "illnId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "illnLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "illnName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "label": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            }
+          }
+        },
+        "drugInHospitalInfo": {
+          "properties": {
+            "drugInHosp": {
+              "properties": {
+                "administrationId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "dosage": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "doseUnit": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drugId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drugLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "drugName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "freq": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "prescribedType": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "stopDateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            }
+          }
+        },
+        "drugLeaveHospitalInfo": {
+          "properties": {
+            "drugLeave": {
+              "properties": {
+                "administrationId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "dosage": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "doseUnit": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drugId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drugLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "drugName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "freq": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            }
+          }
+        },
+        "hospitalConsulInfo": {
+          "properties": {
+            "consultationOfDoctors": {
+              "properties": {
+                "consultantDate": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "consultantObjective": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "consultantType": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "department": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "requestedDate": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            }
+          }
+        },
+        "hospitalDispInfo": {
+          "properties": {
+            "bloodTransfusion": {
+              "properties": {
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "endDateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "transBloodAmount": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "transBloodType": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "transBloodUnit": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "disposalMeans": {
+              "properties": {
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "orderText": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "stopDateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            }
+          }
+        },
+        "hospitalExamInfo": {
+          "properties": {
+            "carotidArteryUltrasonography": {
+              "properties": {
+                "checkSymptoms": {
+                  "properties": {
+                    "symptoms": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "symptomsInfo": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "dataId": {
+                  "type": "string"
+                },
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "examClass": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examImpr": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examSee": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "lInBore": {
+                  "type": "string"
+                },
+                "lInImt": {
+                  "type": "string"
+                },
+                "lInPi": {
+                  "type": "string"
+                },
+                "lInRi": {
+                  "type": "string"
+                },
+                "lInVmax": {
+                  "type": "string"
+                },
+                "lInVmin": {
+                  "type": "string"
+                },
+                "lOutBore": {
+                  "type": "string"
+                },
+                "lOutImt": {
+                  "type": "string"
+                },
+                "lOutPi": {
+                  "type": "string"
+                },
+                "lOutRi": {
+                  "type": "string"
+                },
+                "lOutVmax": {
+                  "type": "string"
+                },
+                "lOutVmin": {
+                  "type": "string"
+                },
+                "lTotBore": {
+                  "type": "string"
+                },
+                "lTotImt": {
+                  "type": "string"
+                },
+                "lTotPi": {
+                  "type": "string"
+                },
+                "lTotRi": {
+                  "type": "string"
+                },
+                "lTotVmax": {
+                  "type": "string"
+                },
+                "lTotVmin": {
+                  "type": "string"
+                },
+                "paraBore": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraImt": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraPi": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraRi": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraVmax": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraVmin": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "rInBore": {
+                  "type": "string"
+                },
+                "rInImt": {
+                  "type": "string"
+                },
+                "rInPi": {
+                  "type": "string"
+                },
+                "rInRi": {
+                  "type": "string"
+                },
+                "rInVmax": {
+                  "type": "string"
+                },
+                "rInVmin": {
+                  "type": "string"
+                },
+                "rOutBore": {
+                  "type": "string"
+                },
+                "rOutImt": {
+                  "type": "string"
+                },
+                "rOutPi": {
+                  "type": "string"
+                },
+                "rOutRi": {
+                  "type": "string"
+                },
+                "rOutVmax": {
+                  "type": "string"
+                },
+                "rOutVmin": {
+                  "type": "string"
+                },
+                "rTotBore": {
+                  "type": "string"
+                },
+                "rTotImt": {
+                  "type": "string"
+                },
+                "rTotPi": {
+                  "type": "string"
+                },
+                "rTotRi": {
+                  "type": "string"
+                },
+                "rTotVmax": {
+                  "type": "string"
+                },
+                "rTotVmin": {
+                  "type": "string"
+                }
+              }
+            },
+            "echocardiography": {
+              "properties": {
+                "checkSymptoms": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    },
+                    "symptoms": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "symptomsInfo": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "dataId": {
+                  "type": "string"
+                },
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "examClass": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examImpr": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examSee": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraA": {
+                  "type": "integer"
+                },
+                "paraAao": {
+                  "type": "integer"
+                },
+                "paraAortAvvMax": {
+                  "type": "integer"
+                },
+                "paraAortDoppFlow": {
+                  "type": "integer"
+                },
+                "paraAortLobeStru": {
+                  "type": "integer"
+                },
+                "paraAortP": {
+                  "type": "integer"
+                },
+                "paraAortValv": {
+                  "type": "integer"
+                },
+                "paraE": {
+                  "type": "integer"
+                },
+                "paraFs": {
+                  "type": "integer"
+                },
+                "paraLad": {
+                  "type": "integer"
+                },
+                "paraLpa": {
+                  "type": "integer"
+                },
+                "paraLvBore": {
+                  "type": "integer"
+                },
+                "paraLvLasid": {
+                  "type": "integer"
+                },
+                "paraLvc": {
+                  "type": "integer"
+                },
+                "paraLvedd": {
+                  "type": "integer"
+                },
+                "paraLvedv": {
+                  "type": "integer"
+                },
+                "paraLvef": {
+                  "type": "integer"
+                },
+                "paraLvesd": {
+                  "type": "integer"
+                },
+                "paraLvesv": {
+                  "type": "integer"
+                },
+                "paraLvmbv": {
+                  "type": "integer"
+                },
+                "paraLvpw": {
+                  "type": "integer"
+                },
+                "paraLvradtr": {
+                  "type": "integer"
+                },
+                "paraMitrDoppFlow": {
+                  "type": "integer"
+                },
+                "paraMitrLobeStru": {
+                  "type": "integer"
+                },
+                "paraMpa": {
+                  "type": "integer"
+                },
+                "paraPeri": {
+                  "type": "integer"
+                },
+                "paraPlumFlapDoppFlow": {
+                  "type": "integer"
+                },
+                "paraPlumFlapLobeStru": {
+                  "type": "integer"
+                },
+                "paraPlumFlapP": {
+                  "type": "integer"
+                },
+                "paraPlumFlapPrvMax": {
+                  "type": "integer"
+                },
+                "paraPlumFlapTrvMax": {
+                  "type": "integer"
+                },
+                "paraRaFreeWall": {
+                  "type": "integer"
+                },
+                "paraRaMaxBore": {
+                  "type": "integer"
+                },
+                "paraRpa": {
+                  "type": "integer"
+                },
+                "paraRvBore": {
+                  "type": "integer"
+                },
+                "paraRvMaxBore": {
+                  "type": "integer"
+                },
+                "paraSinusDiam": {
+                  "type": "integer"
+                },
+                "paraSinusSize": {
+                  "type": "integer"
+                },
+                "paraTricDoppFlow": {
+                  "type": "integer"
+                },
+                "paraTricLobeStru": {
+                  "type": "integer"
+                },
+                "paraTricP": {
+                  "type": "integer"
+                },
+                "paraTricTrvMax": {
+                  "type": "integer"
+                },
+                "paraVentSept": {
+                  "type": "integer"
+                },
+                "patiId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiVisitId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "examInfo": {
+              "properties": {
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "examClass": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examImpr": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examSee": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            },
+            "vertebralArteryUltrasound": {
+              "properties": {
+                "checkSymptoms": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    },
+                    "symptoms": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "symptomsInfo": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "dataId": {
+                  "type": "string"
+                },
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "examClass": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examImpr": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "examSee": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "lBore": {
+                  "type": "string"
+                },
+                "lPi": {
+                  "type": "string"
+                },
+                "lRi": {
+                  "type": "string"
+                },
+                "lVmax": {
+                  "type": "string"
+                },
+                "lVmin": {
+                  "type": "string"
+                },
+                "paraBore": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraPi": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraRi": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraVmax": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "paraVmin": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "rPi": {
+                  "type": "string"
+                },
+                "rRi": {
+                  "type": "string"
+                },
+                "rVmax": {
+                  "type": "string"
+                },
+                "rVmin": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "hospitalizationInfoSum": {
+          "properties": {
+            "admissionDateTime": {
+              "type": "date",
+              "format": "YYYY-MM-dd HH:mm:ss.S"
+            },
+            "chargeTypeId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "chargeTypeName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "deptAdmissionToId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "deptAdmissionToName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "deptDischargeFromId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "deptDischargeFromName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "dischargeDateTime": {
+              "type": "date",
+              "format": "YYYY-MM-dd HH:mm:ss.S"
+            },
+            "dischargeDispositionId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "dischargeDispositionName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "inHospDays": {
+              "type": "double"
+            },
+            "inHospNo": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "mailingAddress": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "mediPayWayId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "mediPayWayName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "nextOfKin": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "nextOfKinAddr": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "nextOfKinPhone": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "nextOfKinZipCode": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            },
+            "patientClassId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "patientClassName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "phoneNumberHome": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "relationship": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "unitZipCode": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "natureInfo": {
+          "properties": {
+            "age": {
+              "type": "integer"
+            },
+            "ageId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "ageName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "dateOfBirth": {
+              "type": "date",
+              "format": "YYYY-MM-dd HH:mm:ss.S"
+            },
+            "marrageState": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "marrageStateId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "name": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "natiId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "natiName": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            },
+            "region": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "regionId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "sexId": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "sexName": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "operInHospitalInfo": {
+          "properties": {
+            "operInfo": {
+              "properties": {
+                "anesthesiaMethodId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "anesthesiaMethodName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "diagAfterOper": {
+                  "properties": {
+                    "illnId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "illnLabel": {
+                      "properties": {
+                        "labelId": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        },
+                        "labelName": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        }
+                      }
+                    },
+                    "illnName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "diagBeforeOper": {
+                  "properties": {
+                    "illnId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "illnLabel": {
+                      "properties": {
+                        "labelId": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        },
+                        "labelName": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        }
+                      }
+                    },
+                    "illnName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "firstAssistant": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "operName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operationResult": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operator": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "secondAssistant": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "operPara": {
+              "properties": {
+                "anesthesiaMethodId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "anesthesiaMethodName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "circulation": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "contName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "diagAfterOper": {
+                  "properties": {
+                    "illnId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "illnLabel": {
+                      "properties": {
+                        "labelId": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        },
+                        "labelName": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        }
+                      }
+                    },
+                    "illnName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "diagBeforeOper": {
+                  "properties": {
+                    "illnId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "illnLabel": {
+                      "properties": {
+                        "labelId": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        },
+                        "labelName": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        }
+                      }
+                    },
+                    "illnName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "diseNum": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "firstAssistant": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "label": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string"
+                    },
+                    "labelName": {
+                      "type": "string"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "operId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "operName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operationResult": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operator": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "position": {
+                  "properties": {
+                    "posiName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "stenLeve": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "stroPropName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "timi": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "puncName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "secondAssistant": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "operStenMode": {
+              "properties": {
+                "anesthesiaMethodId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "anesthesiaMethodName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "diagAfterOper": {
+                  "properties": {
+                    "illnId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "illnLabel": {
+                      "properties": {
+                        "labelId": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        },
+                        "labelName": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        }
+                      }
+                    },
+                    "illnName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "diagBeforeOper": {
+                  "properties": {
+                    "illnId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "illnLabel": {
+                      "properties": {
+                        "labelId": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        },
+                        "labelName": {
+                          "type": "string",
+                          "index": "not_analyzed"
+                        }
+                      }
+                    },
+                    "illnName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "firstAssistant": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "operName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operationResult": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operator": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "position": {
+                  "properties": {
+                    "balloonName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "posiName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "stenName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "timi": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    }
+                  }
+                },
+                "reflow": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "secondAssistant": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "stenCount": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "stenLeng": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            },
+            "rebuildOfBlood": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "pastAndFamilyHistory": {
+          "properties": {
+            "drinkStatus": {
+              "properties": {
+                "drinkAmmount": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drinkAmmountUnit": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drinkTime": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drinkTimeUnit": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "drugAllergy": {
+              "properties": {
+                "allergyCause": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "ifExist": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            },
+            "drugHistory": {
+              "properties": {
+                "drugId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "drugLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "drugName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "familyIllnHistory": {
+              "properties": {
+                "illnId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "illnLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "illnName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "label": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "foodAllergy": {
+              "properties": {
+                "allergyCause": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "ifExist": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "illnHistory": {
+              "properties": {
+                "illnId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "illnLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "illnName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "label": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "operHistory": {
+              "properties": {
+                "label": {
+                  "properties": {
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "operId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "operLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "operName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "otherAllergy": {
+              "properties": {
+                "allergyCause": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "ifExist": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            },
+            "smokeStatus": {
+              "properties": {
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "smokeTime": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "somkeAmmount": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "somkeAmmountUnit": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "somkeTimeUnit": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "status": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            }
+          }
+        },
+        "patiId": {
+          "type": "string"
+        },
+        "patiVisitId": {
+          "type": "string"
+        },
+        "signInfo": {
+          "properties": {
+            "bmi": {
+              "type": "double"
+            },
+            "bodyHeig": {
+              "type": "double"
+            },
+            "bodyWeig": {
+              "type": "double"
+            },
+            "dbp": {
+              "properties": {
+                "dateTime": {
+                  "type": "string"
+                },
+                "dbpVlaue": {
+                  "type": "double"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "recordTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "hr": {
+              "properties": {
+                "dateTime": {
+                  "type": "string"
+                },
+                "hrVlaue": {
+                  "type": "double"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "recordTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            },
+            "pulse": {
+              "properties": {
+                "dateTime": {
+                  "type": "string"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "pulseVlaue": {
+                  "type": "double"
+                },
+                "recordTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                }
+              }
+            },
+            "sbp": {
+              "properties": {
+                "dateTime": {
+                  "type": "string"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "recordTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "sbpVlaue": {
+                  "type": "double"
+                }
+              }
+            }
+          }
+        },
+        "testInHospitalInfo": {
+          "properties": {
+            "patiId": {
+              "type": "string"
+            },
+            "patiVisitId": {
+              "type": "string"
+            },
+            "testinfo": {
+              "properties": {
+                "dateTime": {
+                  "type": "date",
+                  "format": "YYYY-MM-dd HH:mm:ss.S"
+                },
+                "patiId": {
+                  "type": "string"
+                },
+                "patiVisitId": {
+                  "type": "string"
+                },
+                "testId": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "testLabel": {
+                  "properties": {
+                    "labelId": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "labelName": {
+                      "type": "string",
+                      "index": "not_analyzed"
+                    },
+                    "patiId": {
+                      "type": "string"
+                    },
+                    "patiVisitId": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "testName": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                },
+                "testResult": {
+                  "type": "string",
+                  "index": "not_analyzed"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
