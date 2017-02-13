@@ -1,5 +1,5 @@
 #!/bin/bash
-host=192.168.1.92:9200
+host=localhost:26200
 index="medical_record"
 echo $host
 echo $index
